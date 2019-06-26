@@ -199,6 +199,7 @@ public class SwipeItemLayout extends ViewGroup {
         super.onDetachedFromWindow();
         removeCallbacks(scrollRunnable);
         touchMode = Mode.RESET;
+        offsetChildrenLeftAndRight(-scrollOffset);
         scrollOffset = 0;
     }
 
